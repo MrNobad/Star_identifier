@@ -45,7 +45,11 @@ const createStarListItem = function (form) {
   mass.textContent = form.mass.value;
   starListItem.appendChild(mass);
 
-  const drone = document.createElement('p');
+  const luminosity = document.createElement('p');
+  luminosity.textContent = form.luminosity.value;
+  starListItem.appendChild(luminosity);
+
+  const drone = document.createElement('h4');
   drone.textContent = form.drone.value;
   starListItem.appendChild(drone);
 
