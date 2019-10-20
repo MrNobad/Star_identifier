@@ -8,10 +8,9 @@
   <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <style>
-body {
-  background-image: url("/Users/user/codeclan_homeworks/week_6/day_5/manipulate_DOM_hw/images/Pleiades.jpg");
-        background-repeat:repeat;
-       background-size:cover;
+  body { background-image: url("/Users/user/codeclan_homeworks/week_6/day_5/manipulate_DOM_hw/images/Pleiades.jpg");
+  background-repeat:repeat;
+  background-size:cover;
 }
 </style>
 <body>
@@ -19,83 +18,96 @@ body {
   <h1 id="heading">Star Classification</h1>
 
   <h2>Create and Name Your Own Star</h2>
+  <table>
+    <thead>
+      <tr>
+        <td>
+          <form id="new-item-form">
+            <br>
+            <div class="form-item">
+              <label for="name" class="primary">Name of Star</label>
+              <input type="text" id="name" required/>
+            </div>
 
-  <form id="new-item-form">
-    <br>
-      <div class="form-item">
-        <label for="name" class="primary">Name of Star</label>
-        <input type="text" id="name" required/>
-      </div>
+            <div class="form-item">
+              <label for="category" class="primary">Category Type</label>
+              <select id="category">
+                <option value="" disabled selected></option>
+                <option value="Red Dwarf">Red Dwarf (M)</option>
+                <option value="Yellow Dwarf">Yellow Dwarf (K)</option>
+                <option value="Red Giant">Red Giant (F)</option>
+                <option value="Blue Giant">Blue Giant (A)</option>
+                <option value="Super Giant">Super Giant (O)</option>
+                <option value="White Dwarf">White Dwarf (B)</option>
+                <option value="Brown Dwarf">Brown Dwarf (T)</option>
+                <option value="Neutron Star">Neutron Star</option>
+                <option value="Pulsar">Pulsar</option>
+                <option value="Binary Star">Binary Star</option>
+                <option value="X-Ray Binary">X-Ray Binary</option>
+              </select>
+            </div>
 
-      <div class="form-item">
-        <label for="category" class="primary">Category Type</label>
-        <select id="category">
-          <option value="" disabled selected></option>
-          <option value="Red Dwarf">Red Dwarf</option>
-          <option value="Yellow Dwarf">Yellow Dwarf</option>
-          <option value="Red Giant">Red Giant</option>
-          <option value="Blue Giant">Blue Giant</option>
-          <option value="Super Giant">Super Giant</option>
-          <option value="White Dwarf">White Dwarf</option>
-          <option value="Brown Dwarf">Brown Dwarf</option>
-          <option value="Neutron Star">Neutron Star</option>
-          <option value="Pulsar">Pulsar</option>
-          <option value="Binary Star">Binary Star</option>
-          <option value="X-Ray Binary">X-Ray Binary</option>
-        </select>
-      </div>
+            <div class="form-item">
+              <label for="mass" class="primary">Average Mass (Sun = 1)</label>
+              <input type="text" id="mass" required/>
+            </div>
 
-      <div class="form-item">
-        <label for="mass" class="primary">Average Mass (Sun = 1)</label>
-        <input type="text" id="mass" required/>
-      </div>
+            <div class="form-item">
+              <label for="surface_temp" class="primary">Surface Temperature (Kelvin)</label>
+              <div>
 
-      <div class="form-item">
-        <label for="surface_temp" class="primary">Surface Temperature (Kelvin)</label>
-      <div>
-        
-        <input type="radio" id="3.5k" name="drone" value="under 3,500 K"
-        checked>
-        <label for="3.5k">under 3,500 K</label>
-      </div>
+                <input type="radio" id="3.5k" name="drone" value="under 3,500 K"
+                checked>
+                <label for="3.5k">under 3,500 K</label>
+              </div>
 
-      <div>
-        <input type="radio" id="5k" name="drone" value="3,500 - 5,000 K">
-        <label for="5k">3,500 - 5,000 K</label>
-      </div>
+              <div>
+                <input type="radio" id="5k" name="drone" value="3,500 - 5,000 K">
+                <label for="5k">3,500 - 5,000 K</label>
+              </div>
 
-      <div>
-        <input type="radio" id="6k" name="drone" value="5,000 - 6,000 K">
-        <label for="6k">5,000 - 6,000 K</label>
-      </div>
-      <div>
-        <input type="radio" id="7.5k" name="drone" value="6,000 - 7,500 K">
-        <label for="7.5k">6,000 - 7,500 K</label>
-      </div>
-      <div>
-        <input type="radio" id="11k" name="drone" value="7,500 - 11,000 K">
-        <label for="11k">7,500 - 11,000 K</label>
-      </div>
-      <div>
-        <input type="radio" id="25k" name="drone" value="11,000 - 25,000 K">
-        <label for="25k">11,000 - 25,000 K</label>
-      </div>
-      <div>
-        <input type="radio" id="O25k" name="drone" value="over 25,000 K">
-        <label for="O25k">over 25,000 K</label>
-      </div>
+              <div>
+                <input type="radio" id="6k" name="drone" value="5,000 - 6,000 K">
+                <label for="6k">5,000 - 6,000 K</label>
+              </div>
+              <div>
+                <input type="radio" id="7.5k" name="drone" value="6,000 - 7,500 K">
+                <label for="7.5k">6,000 - 7,500 K</label>
+              </div>
+              <div>
+                <input type="radio" id="11k" name="drone" value="7,500 - 11,000 K">
+                <label for="11k">7,500 - 11,000 K</label>
+              </div>
+              <div>
+                <input type="radio" id="25k" name="drone" value="11,000 - 25,000 K">
+                <label for="25k">11,000 - 25,000 K</label>
+              </div>
+              <div>
+                <input type="radio" id="O25k" name="drone" value="over 25,000 K">
+                <label for="O25k">over 25,000 K</label>
+              </div>
 
-    </div>
-    <input type="submit" value="save"/>
-  </form>
+            </div>
+            <input type="submit" value="save"/>
+          </form>
+        </td>
+        <td>
+          <div class="container">
+            <img class="item" src="images/star_classification_21131.png" alt="star classification graph" height="400px">
+            <br>
+            <img class="item" src="images/Star_types_T_through_O.png" alt="pictures of star types" height="200px">
+          </div>
+        </td>
+      </tr>
+    </thead>
+  </table>
 
   <button id="delete-all">Delete All</button>
-<br>
-<br>
-<br>
+  <br>
+  <br>
+  <br>
 
   <h1>Star List</h1>
   <div id="star-list"></div>
-  <li></li>
 </body>
 </html>

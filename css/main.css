@@ -42,7 +42,26 @@ button, input[type="submit"] {
 }
 
 .container {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
   justify-content: flex-end;
+}
+.item {
+  margin: 5px;
+}
+
+{
+   box-sizing: border-box;
+}
+html, body, div, img {
+   margin: 10;
+   padding: 5;
+   border: 5;
+   font-size: 110%;
+   font: inherit;
+   vertical-align: baseline;
+}
+body {
+   line-height: 1.5;
 }
